@@ -1,0 +1,27 @@
+server:
+   port: 8083
+encrypt:
+  key: ABCDEFGHIJKLMNOPQRSTUVWXYZ
+spring:
+    security:
+         user:
+          name: mycompany
+          password: mycompany
+    cloud:
+        config:
+            server:
+                encrypt:
+                  enabled: false
+                git:
+                    uri: https://github.com/Manisha9493/spring-cloudconfig-wa-tolls.git
+                    search-paths:
+                    - station*
+                    repos:
+                        perf:
+                            pattern: "*/pref"
+                            uri:  https://github.com/Manisha9493/spring-cloudconfig-wa-tolls-perf
+                            search-paths:
+                                - "station*" 
+                            
+
+          
